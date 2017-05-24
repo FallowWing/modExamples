@@ -1,0 +1,12 @@
+function main() {
+	clear();
+	append("This is a test of this mod");
+	addChoice("Next", next);
+}
+
+function next() {
+	clear();
+	append("This concludes the test, now you're stuck here");
+}
+
+main();

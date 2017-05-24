@@ -1,0 +1,48 @@
+var favColour = "none";
+var story;
+
+story = function(passage) {
+	clear();
+
+	if (passage == "start") {
+		append("This is were the mod starts!\n");
+		append("What's your favourite colour?\n");
+
+		addChoice("Red.", goto("redChosen"));
+		addChoice("Green.", goto("greenChosen"));
+		addChoice("Blue.", goto("blueChosen"));
+	}
+
+	if (passage == "redChosen") {
+		append("Like roses!");
+		favColour = "red";
+		addChoice("Next", goto("afterChoice"));
+	}
+
+	if (passage == "greenChosen") {
+		append("Like... Green things!");
+		favColour = "green";
+		addChoice("Next", goto("afterChoice"));
+	}
+
+	if (passage == "blueChosen") {
+		append("Like the sky!");
+		favColour = "blue";
+		addChoice("Next", goto("afterChoice"));
+	}
+
+	if (passage == "afterChoice") {
+		append("Now that I'm here I can remember that you chose ");
+		if (favColour == "red") append("the colour of fire!");
+		if (favColour == "green") append("green.");
+		if (favColour == "blue") append("the colour of water!");
+		addChoice("Try again!", goto("start"));
+		addChoice("Leave", modExit);
+	}
+}
+
+function goto(where) {
+	return function() { story(where); };
+}
+
+story("start");

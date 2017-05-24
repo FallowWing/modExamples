@@ -1,0 +1,62 @@
+var player = {
+	hp: 30,
+	attackMin: 3,
+	attackMax: 5,
+	defending: false
+}
+var enemy = {
+	hp: 20,
+	attackMin: 4,
+	attackMax: 6
+}
+var firstTurn = true;
+
+function main() {
+	startTurn();
+}
+
+function startTurn() {
+	clear();
+	if (firstTurn) append("You're attacked by a dragon!\n\n");
+	firstTurn = false;
+
+	append("You have "+player.hp+" hp\n");
+	append("The dragon has "+enemy.hp+" hp");
+
+	if (player.hp <= 0 || enemy.hp <= 0) {
+		append("\n\nGame over");
+		addChoice("Leave", modExit);
+		return;
+	}
+
+	addChoice("Attack", attack);
+	addChoice("Defend", defend);
+}
+
+function attack() {
+	clear();
+
+	var damage = rndInt(player.attackMin, player.attackMax);
+	append("You deal "+damage+" damage.\n");
+	enemy.hp -= damage;
+
+	enemyAttack();
+
+	addChoice("Continue", startTurn);
+}
+
+defend = function() {
+	clear();
+	append("You stand and block.\n");
+	enemyAttack();
+
+	addChoice("Continue", startTurn);
+}
+
+function enemyAttack() {
+	var enemyDamage = rndInt(enemy.attackMin, enemy.attackMax);
+	append("The dragon does "+enemyDamage+" damage to you.");
+	player.hp -= enemyDamage;
+}
+
+main();

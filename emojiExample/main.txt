@@ -1,0 +1,9 @@
+function main() {
+	clear();
+	// append("This is an example of displaying images in line as emojis:");
+	append("This is an example of displaying images in line as emojis:  <!img:custom_abuse>");
+	// addSprite("custom_abuse.png");
+	addChoice("Leave", modExit);
+}
+
+main();

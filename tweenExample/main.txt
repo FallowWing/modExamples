@@ -1,0 +1,38 @@
+function main() {
+	clear();
+
+	var perRow = 4;
+	var perCol = 3;
+	for (i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) {
+		var s = addSprite("art.png");
+		s.x = (i%perRow)*(800/perRow);
+		s.y = Math.floor(i/perRow)*(600/perCol);
+
+		if (i == 0) tween(s, {x: s.x+100}, 0.5, {type: PINGPONG});
+		if (i == 1) tween(s, {scaleX: 2}, 1, {type: PINGPONG});
+		if (i == 2) {
+			s.centerPivot = false;
+			tween(s, {scaleX: 2}, 1, {type: PINGPONG});
+		}
+		if (i == 3) tween(s, {scaleX: 0.5, scaleY: 0.5}, 1, {type: PINGPONG});
+		if (i == 4) tween(s, {rotation: 180}, 1, {type: PINGPONG});
+		if (i == 5) {
+			s.centerPivot = false;
+			tween(s, {rotation: 180}, 1, {type: PINGPONG});
+		}
+		if (i == 6) tween(s, {x: s.x+100, rotation: 180}, 1, {type: PINGPONG});
+		if (i == 7) {
+			s.centerPivot = false;
+			tween(s, {x: s.x+100, rotation: 180}, 1, {type: PINGPONG});
+		}
+		if (i == 8) tween(s, {x: s.x+100, scaleX: 2}, 1, {type: PINGPONG});
+		if (i == 9) {
+			s.centerPivot = false;
+			tween(s, {x: s.x+100, scaleX: 2}, 1, {type: PINGPONG});
+		}
+	}
+
+	addChoice("Leave", modExit);
+}
+
+main();
