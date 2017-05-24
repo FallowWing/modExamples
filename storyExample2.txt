@@ -1,0 +1,36 @@
+var hasDick = false;
+
+function main(seg) {
+	clear();
+
+	if (seg == "start") {
+		append("Do you have a dick?");
+		addChoice("Yes", binder("yes"));
+		addChoice("No", binder("no"));
+	}
+
+	if (seg == "yes") {
+		hasDick = true;
+		append("You picked yes");
+		addChoice("Next", binder("next"));
+	}
+
+	if (seg == "no") {
+		hasDick = false;
+		append("You picked no");
+		addChoice("Next", binder("next"));
+	}
+
+	if (seg == "next") {
+		if (hasDick) append("So ya do");
+		else append("So ya don't");
+
+		addChoice("Leave", modExit);
+	}
+}
+
+function binder(str) {
+	return function() { main(str); }
+}
+
+main("start");

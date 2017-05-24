@@ -1,0 +1,32 @@
+var hasDick = false;
+
+function main(seg) {
+	clear();
+
+	if (seg == "start") {
+		append("Do you have a dick?");
+		addChoice("Hello", function() {warn("You clicked the button!");}, {kink: ["Cub"], toolTip: "Hello from tooltip!"}); 
+		addChoice("This one's disabled", function() {}, {enabled: false}); 
+		addChoice("Yes", function() {
+			hasDick = true;
+			main("next");
+		});
+		addChoice("No", function() {
+			hasDick = false;
+			main("next");
+		});
+	}
+
+	if (seg == "next") {
+		if (hasDick) append("So ya do");
+		else append("So ya don't");
+
+		addChoice("Leave", modExit);
+	}
+}
+
+function binder(str) {
+	return function() { main(str); }
+}
+
+main("start");
