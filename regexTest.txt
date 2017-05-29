@@ -1,0 +1,8 @@
+clear();
+
+var reg = new EReg("a", "i");
+
+append("Matches abc? "+reg.match("abc")+"\n");
+append("Matches def? "+reg.match("def"));
+
+addChoice("Leave", modExit);
