@@ -1,0 +1,18 @@
+var abuseStr = "iVBORw0KGgoAAAANSUhEUgAAAB0AAAAZBAMAAAA/LDgqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAD1BMVEVHcEx7CQlnCAg2ABtDAD9Ipat/AAAAAXRSTlMAQObYZgAAAIlJREFUGNNd0NsNxSAIBmAfOsABFrBsYJigxv1nOlzthaZJP/gbia1pHesCgFYV3I1iNdZKwu89jkCMhz4RcJOQhD1OZvIf3OIecGa8jP3tsz9O19pzGaQv8LZ87HPcHhYBc5xv1Djf++nYXfurWeNmRDeGjzW1obuwxy3AWT3vb6b3hc4nq+Gff/NJKENdbgyPAAAAAElFTkSuQmCC";
+
+function main() {
+	clear();
+	// append("This is an example of displaying images in line as emojis:");
+	append("This is an example of displaying images in line as emojis:  <!img:custom_abuse>");
+	// addSprite("custom_abuse.png");
+	addChoice("Leave", modExit);
+}
+
+
+var assetsLeft = 1;
+function imageLoaded() {
+	assetsLeft -= 1;
+	if (assetsLeft == 0) main();
+}
+
+loadBase64Png("custom_abuse", abuseStr, imageLoaded);

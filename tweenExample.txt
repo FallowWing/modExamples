@@ -4,7 +4,7 @@ function main() {
 	var perRow = 4;
 	var perCol = 3;
 	for (i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) {
-		var s = addSprite("art.png");
+		var s = addSprite("small_custom_art");
 		s.x = (i%perRow)*(800/perRow);
 		s.y = Math.floor(i/perRow)*(600/perCol);
 
@@ -35,4 +35,12 @@ function main() {
 	addChoice("Leave", modExit);
 }
 
-main();
+var smallArtStr = "iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAD8SURBVGhD7ZgBDsMgCEV197/zNpbZUCxWCZrflpeYZWihT2qzLL+/pBvw+n9enhBBI0TQCBE0QgSNEMk5/8YsRnNDdsSyQSYRKjT7t+Zo/ueekRXdsDAkgipBdIsgSxBdIpoExWgOgeccds9HinLx4Unzz4eRYjINXctjJVeJyXlOa07jVOQsobaGx+Ua+k7w+VFkTVVEu0GJtq7E5U330Fubc3hGLIlaeObSmPrW8t6QFpXIyuKe7ETK8+zFyg2pOnLFbhCbiHc3VrPryFW7QWwiVgkU+eqMIGDZnGkiqzsF2RELIYJGiKARImiECBohgkaIoBEiaNxEJKUPXXV5VJ32wT8AAAAASUVORK5CYII=";
+
+var assetsLeft = 1;
+function imageLoaded() {
+	assetsLeft -= 1;
+	if (assetsLeft == 0) main();
+}
+
+loadBase64Png("small_custom_art", smallArtStr, imageLoaded);
