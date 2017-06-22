@@ -1,6 +1,6 @@
 Paraphore mods are .txt files written in the Haxe language.
 
-Start by peeking at modText.txt to see the most basic possible mod structure.
+Start by peeking at baseExample.txt to see the most basic possible mod structure.
 
 Peek at silverwing7z.txt to check out a fan-made mod with its own custom art, by silverwing7z!
 
