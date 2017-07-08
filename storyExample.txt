@@ -1,7 +1,6 @@
 var favColour = "none";
-var story;
 
-story = function(passage) {
+function story(passage) {
 	clear();
 
 	if (passage == "start") {
