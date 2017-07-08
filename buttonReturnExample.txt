@@ -1,0 +1,28 @@
+var btn;
+
+function main() {
+	clear();
+
+	btn = addChoice("This button does nothing", doNothing);
+	addChoice("Disable button", disableButton);
+	addChoice("Enable button", enableButton);
+	addChoice("Destroy button", destroyButton);
+	addChoice("Leave", modExit);
+}
+
+function doNothing() {
+}
+
+function disableButton() {
+	btn.disable();
+}
+
+function enableButton() {
+	btn.enable();
+}
+
+function destroyButton() {
+	btn.destroy();
+}
+
+main();
