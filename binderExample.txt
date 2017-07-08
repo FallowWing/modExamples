@@ -1,0 +1,26 @@
+function main(seg) {
+	clear();
+
+	if (seg == "start") {
+		append("addChoice won't take a function with parameters, so you can use a function returner to get around it");
+		addChoice("Go", binder("nextPlace"));
+	}
+
+	if (seg == "nextPlace") {
+		append("Now we're here.");
+		addChoice("Go", binder("finalPlace"));
+	}
+
+	if (seg == "finalPlace") {
+		append("And now we're here, this way we can have less boilerplate code.");
+		addChoice("Go", modExit);
+	}
+}
+
+function binder(bindTo) {
+	return function() {
+		main(bindTo);
+	};
+}
+
+main("start");
