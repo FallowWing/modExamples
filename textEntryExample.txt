@@ -1,0 +1,13 @@
+function main() {
+	clear();
+	append("Give me some text!");
+	addTextChoice(textGetter);
+}
+
+function textGetter(str) {
+	clear();
+	append("I was given the text: "+str);
+	addChoice("Leave", modExit);
+}
+
+main();
