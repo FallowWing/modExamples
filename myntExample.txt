@@ -1,0 +1,42 @@
+function main() {
+	clear();
+	append("This is example of how to use mynt");
+	addChoice("Ok...", myntTest);
+}
+
+function myntTest() {
+	clear();
+	showMynt();
+	myntQueueHideChoices();
+	myntQueueSay("Mew?");
+	myntQueueDelay(2);
+	// The options for transitions are: 
+	// default, blush, fake, pained, sad, serious, angry, crushed, dizzy, lewd, protocol, septrica, shock, surprised, tilde, um, sleepy, suspect, tinysmile, unimpressed
+	myntQueueTransition("angry");
+	myntQueueSay("Why have I been summoned!");
+	myntQueueDelay(2);
+	myntQueueTransition("surprised");
+	myntQueueSay("Oh! For a test!");
+	myntQueueTransition("default");
+	myntQueueSay("Well, this is how I work.");
+
+	myntQueueAddChoice("Cool.", myntEndTest);
+	myntQueueShowChoices();
+}
+
+function myntEndTest() {
+	clear();
+	myntQueueHideChoices(); // You don't really need to hide and show the choice box this often, it's just for effect
+	myntQueueSay("Well, see ya.");
+	myntQueueDelay(2);
+	myntQueueCall(endOfMod); // myntQueueCall takes another function to call
+}
+
+function endOfMod() {
+	clear();
+	myntQueueShowChoices();
+	myntQueueCall(hideMynt);
+	addChoice("Well, that was nice", modExit);
+}
+
+main();
