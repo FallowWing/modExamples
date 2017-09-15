@@ -1,0 +1,236 @@
+var player = {
+
+	hp: 80,
+	lust: 0,
+	attackMin: 5,
+	attackMax: 15,
+	seduceMin: 2,
+	seduceMax: 18,
+	defense: 0,
+	defending: false
+
+}
+
+var enemy = {
+
+	hp: 100,
+	lust: 10,
+	attackMin: 4,
+	attackMax: 10
+
+}
+
+var firstTurn = true;
+
+
+
+function main() {
+
+	startTurn();
+
+}
+
+
+
+function startTurn() {
+
+	clear();
+
+	if (firstTurn) append("You are sitting alone in the grassy field, warming your hands by the fire like a good survivalist.\n\nA shadow passes by, coming from somewhere above you! You look up but see nothing out of the ordinary... Perhaps whatever it was is gone now?\n\nYou turn your attention back to the warm glow of the fire, listening as the soft crackles of the flames eat away the logs they burn... As you continue to sit there, you neglect to notice the large creature that has managed to sneak up on you...\n\nSensing something behind you, you quickly spring up to your feet and raise your bare fists. What stands infront of you takes you for a bit of a loop! You have raised your fists to a GRYPHON... who is now amused with your sudden take to a fight. He takes a defensive stance himself and readies himself for combat!\n\n");
+
+	firstTurn = false;
+
+
+
+	append("You have "+player.hp+" hp\n");
+	append("Your lust is at "+player.lust+"/100.\n\n");
+
+	append("The gryphon has "+enemy.hp+" hp\n");
+	append("The gryphons lust is at "+enemy.lust+"/100.");
+
+
+
+	if (player.hp <= 0) {
+
+		append("\n\nThat's it... the gryphon has dealt too much damage to you to continue fighting. With a shudder of defeat, you collapse into the grass at your feet...");
+		addChoice("You win, okay?", gryphonSubmit1);
+
+		return;
+	}
+	if (player.lust >=100) {
+
+		append("You can't hold out anymore... your mind is too flustered to function normally. You collapse into the grass and are completely at the gryphons whim.");
+		addChoice("Accept your fate.", gryphonSubmit2);
+
+		return;
+	}
+
+	if (enemy.hp <= 0) {
+
+		append("\n\nAmazingly, you have managed to defeat the gryphon who has now fallen onto his rump, looking dazed...");
+		addChoice("Approach the defeated gryphon.", gryphonDominate1);
+
+		return;
+	}
+	if (enemy.lust >=100) {
+
+		append("\n\nThe gryphon shudders slightly and stops his attacks... he looks up at you meakly and sits down in the grass, his sheath swelling with arousal. You have tamed the beast!");
+		addChoice("Take advantage.", gryphonDominate2);
+		addChoice("Take willingly.", gryphonSubmitDom);
+		addChoice("Get out of here, you!", gryphonSpare);
+
+		return;
+	}
+
+    addChoice("Attack", attack);
+	addChoice("Seduce", seduce);
+	addChoice("Defend", defend);
+
+}
+
+
+
+function attack() {
+    clear();
+	var damage = rndInt(player.attackMin, player.attackMax);
+	append("You swing your fists at the gryphons hide and deal "+damage+" damage.\n");
+	defending = false;
+	enemy.hp -= damage;
+	enemyAttack();
+	addChoice("Continue", startTurn);
+
+}
+
+
+function seduce() {
+    clear();
+	var lust = rndInt(player.seduceMin, player.seduceMax);
+	append("You strike a sexy pose, positioning your body in a questionable position... the gryphon takes "+lust+" to their lust.\n");
+	enemy.lust += lust;
+	defending = false;
+	enemyAttack();
+	addChoice("Continue", startTurn);
+}
+
+
+
+defend = function() {
+
+	clear();
+	defending = true;
+	defense = rndInt(enemy.attackMin, enemy.attackMax);
+    append("You try to block the gryphons attack, you manage to block "+defense+" though.\n");
+    enemyAttack();
+    addChoice("Continue", startTurn);
+
+}
+
+
+
+function enemyAttack() {
+
+	var enemyDamage = rndInt(enemy.attackMin, enemy.attackMax);
+	if (defending) enemyDamage -= defense;
+	if (enemyDamage < 0) enemyDamage = 0;
+	append("The gryphon swipes his massive paws at you and deals "+enemyDamage+" damage to you.");
+	player.hp -= enemyDamage;
+
+}
+
+
+function gryphonSubmitDom() {
+	clear();
+	append("You take a moment to realize what you have in front of you. You defeated a gryphon using the powers of seduction, and now you want to claim your reward... You want that feral cock of theirs, but you want it willingly.\nYou walk over to the gryphon and kneel in the grass infront of them, the gryphon looking you in the eyes has grown curious. Slowly, you turn around so that your rear is staring the gryphon straight on.\n\nSuddenly, the fire inside the gryphon reignites and he stands up, moving closer to your rear. He brings his beak up to your fleshy pucker and begins to enduldge himself in your scent... The feral cock between the gryphons thighs swells even further with lust as he prepares to breed your hole...");
+	addChoice("Take him.", gryphonSubmitDom1);
+	addChoice("Ehh, never mind!", gryphonSpare);
+}
+
+
+function gryphonSubmitDom1() {
+	clear();
+	append("After a small amount of time, you can feel the gryphons tongue press against your anus as he drags it across your rear, lubricating the entrance with his saliva. He takes his forepaws and places them both on your cheeks, spreading them apart to open yourself for the warm intruder even further...\n\nYou enjoy the rimming for what feels like a few minutes before the gryphon pulls his tongue from your depths and cocks his head, asking for your permission to begin...");
+	addChoice("Hop on.", gryphonSubmitDom2);
+	addChoice("No, that's enough. You can go now.", modExit);
+}
+
+
+function gryphonSubmitDom2() {
+	clear();
+	append("The gryphon lets out an audible chirp as he pulls himself ontop of you, his forepaws wrapping around your waist and pulling your ass into his burning crotch. His feral gryphon cock sits between your asscheeks, dribbling pre all over your legs. It's hot, but pleasurable.\n\nThe gryphon grunts as he adjusts himself above you, his hindlegs finding good planting spots in the grass at your sides. Slowly, he pulls his crotch away from your ass and you can feel the tip of his cock slide upwards towards your asshole, his barbs dragging across your flesh. The tip of his feral member sits directly outside your waiting anus as he begins to poke and prod at the cleft of your asshole.\n\nIn no time at all, the gryphon manages to slide his cock inside of your velvety walls, his feline barbs pushing past your entrance. Pleasure shoots up your spine as the gryphon begins to thrust his cock deep inside of your rear.");
+	addChoice("Next.", gryphonSubmitDom3);
+}
+
+
+function gryphonSubmitDom3() {
+	clear();
+	append("The gryphons thrusts grow more animalistic and desperate as he starts to fill you with his pre. You can feel it pool around his cock, filling your bowels with the intense heat from his feral loins. The grip he has on your waist tightens as nears his climax, grunting out loud with slap that is made between his crotch ramming against your bare ass.\n\nYou notice that your nearing your climax as well... With one free hand you begin to stroke your neglected dick, coercing your own precum to escape to the outside world.\n\nSuddenly, the gryphon rockets his crotch into your ass one last time as his feral seed shoots out from his urethra, deep into your bowels. The hot semen begins to collect at the base of his cock as it begins to drip down your legs, flowing over your nuts and down your own length.\n\nThe heat from his cum on your member pushes you over the edge as well as you ejaculate into the grass below... Panting from a rough fuck, the gryphon gets off of your body, letting his cock slide easily out from inside of your asshole.\n\nYou sit up in the grass, feeling his feral gryphon seed spill out from your abused hole. You look up at the gryphon, who is now standing a few feet away from you. He nods slowly and takes off into the night sky, his gryphon cock still dripping cum over the trees he flies over.\n\nWhat a good night.");
+	addChoice("Wind down...", modExit);
+}
+
+
+function gryphonSubmit1() {
+	clear();
+	append("With the fight beaten out of you, the gryphon walks over to you lying in the grass. It's then you can see his feral sheath swell with lust... so that's what he wanted.");
+	addChoice("Submit", gryphonSubmit2);
+	addChoice("Play Dead", submitBail);
+}
+
+
+function gryphonSubmit2() {
+	clear();
+	append("The gryphon stands over you, his feral sheath swelling further with lust. You can see the fleshy pink tip of his cock poking out, ready to breed you!\n\nYou wonder for a moment as to how the gryphon is going to go about this, but your question is suddely answered as he lowers his flank down to the ground and pokes at your junk with his cock. There is no way you're just gonna-\n*Growwllll*\n\nYou raise your legs and pull your knees closer to your face, giving the gryphon full access to your asshole... With a sly look, the gryphon lowers his cock down to your ass.");
+	addChoice("Uh oh...", gryphonSubmit3);
+}
+
+
+function gryphonSubmit3() {
+	clear();
+	append("With little warning (or preparation), the gryphon slams his feral cock into your ass with enough force to push you back a few inches. After the pain subsides from the abrupt entrance, the gryphon begins to thrust his hips into your rear in earnest. The barbs on his leonine penis begin to flare up, dragging and tugging at your soft, velvety flesh.\n\nAfter some time of a vigerous fucking, the gryphons thrust become more feral and desperate, thrusting with enough force to push you into his forepaws. Unable to be pushed any farther back, you can feel the force of the gryphons hips rocketing into your own, his heavy sack bouncing against your cheeks.\n\nYou start to notice that something is leaking out from your asshole, dripping down your stomach... it's the gryphons precum! And there is alot of it!\nYou wonder just how much-\n\nYour thoughts are interupted by the gryphon slamming his cock deep into your bowls and screeching as he climaxes. His cock swells with every thick rope of semen that shoots down into your intestines.\n\nAfter a minute of the gryphons furious climax, he pulls his barbed cock from your abused ass. You look up at the beast, your face bright red from that ordeal... the gryphon looks you in the eyes and turns away, his cock rocking between his thighs, dripping cum down his hindlegs. With s large kick up of some dust, the gryphon takes off into the night sky, having sated his lust for now...\n\nYour pretty sure he's going to be back for a round two...");
+	addChoice("Pack up...", modExit);
+}
+
+
+function submitBail() {
+	clear();
+	append("You roll over, playing dead... the gryphon walks around your body for a second, but seems to get the message. With an annoyed huff, he takes off again and dissapears overhead.\n\nYou got off easy?");
+	addChoice("Leave", modExit);
+}
+
+
+function gryphonDominate1() {
+	clear();
+	append("You walk towards the gryphon, happy that you managed to defeat him. Seeing you get closer, the gryphon turns around and raises his flank into the air, moving his tail off to the side and leaving you with a perfect view of his asshole... you beat him into submission!");
+	addChoice("Take that sweet gryphon rump.", gryphonDominate2);
+	addChoice("Get out of here, you!", gryphonSpare);
+}
+
+
+function gryphonSpare() {
+	clear();
+	append("You really aren't in the mood for that right now. You push the gryphon to stand up and motion for him to leave.\n\nLooking a bit sad, he takes off and leaves you there. Alone with your fire...");
+	addChoice("Return to your fire.", modExit);
+}
+
+
+function gryphonDominate2() {
+	clear();
+	append("With a chuckle, you walk to the rear of the gryphon. His tail raises slightly as you approach.\n\nYou slide your hand across his rump, letting your fingers explore his silky fur... The gryphon begins to lower his chest to the grass below, cocking his head to look you in the eyes.\n\nYou hear a heavy gust of air escape from the gryphons maw as he rests his chin on the grass, spreading his hind legs apart a little wider in preparation for things to come.\n\nYou look over the gryphon rear and take a careful notice to his loins. Large and churning with feral gryphon cum... You can barely see the fleshy tip of his member poke out of his sheath.\n\nThen you see his tight pucker, visible with his tail hanging over on the side to give you a better view. Standing this close to the gryphon fills your lungs with his musk, making it hard to breathe anything else.");
+	addChoice("Lets go.", gryphonDominate3);
+	addChoice("Hmm... not today.", modExit);
+}
+
+function gryphonDominate3() {
+	clear();
+	append("You put two fingers into your mouth and run your tongue over them thoroughly, covering them in your saliva.\n\nPulling them out, you lower your fingers to the gryphons tailhole and begin to massage his velvety flesh. Feeling your fingers push up against his asshole, the gryphon shudders in delight.\n\nYou play with the gryphons hole some more before slipping a single finger inside of his warm pucker. You feel his fleshy walls part once you have found your way inside, the warmth of his body invites you deeper inside...\n\nNeeding no invitation, you press the other finger in and start to finger-fuck the gryphon. His tail raises higher with every slam your knuckles make against his asshole.\n\nFor a few moments longer, you continue to pleasure the feral gryphon with your fingers before pulling them out, letting his anus gape slightly. The gryphon looks back at you as if wondering why you have left his suddenly empty, and begins to whine in protest.\n\nYou bring the tip of your cock up to the gryphons tailhole and press against the loosend flesh. Your penis easily begins to slip its way inside of the gryphons depths. You push the rest of your cock into the gryphon, forcing a soft yelp from deep withing the gryphons chest.\n\nYou thrust your dick inside the gryphon mercilessly, your flesh slapping up against his furry rear. The gryphon begins to moan, apparently lost in a world of pleasure.");
+	addChoice("Fuck harder!", gryphonDominate4);
+}
+
+function gryphonDominate4() {
+	clear();
+	append("You mercilessly pound against the gryphons furry backside, dragging your cock in and out from his abused tailhole. The gryphon begins to push his ass up against you with every thrust, getting more and more into it.\n\nYou can feel the gryphons heavy nutsack slap against your own in a pleasurable way, forcing more and more pre into his anus. The gryphon begins to pant, his sphincter clenching your cock regularly. You suspect the gryphon is nearing his climax.\n\nYou grip the gryphons sides and rocket your hips back and forth, stimulating yourself enough that you too are nearing your climax. You continue to furiously breed the gryphons hole.\n\nAfter some time, you clench your teeth and pull your cock out until nothing but the tip is still inside of the gryphon before slamming in deep inside the feral, ejaculating inside of his abused tailhole. You begin to fill the gryphon with your cum, however the warmth seems to push the gryphon off the edge as his anal-ring clenches and holds you firm as he climaxes too into the grass below. Rope after rope of thick, hot semen escape from the two of you...\n\nWith his anus filled with your seed, you pull your cock out from inside of the gryphon. His anus gapes as your cum leaks out and trickles down his balls and into his own spunk puddle.\n\nThe gryphon shakingly looks back at you and winks before taking flight and dissapearing into the night sky... Perhaps he shall become a regular?");
+	addChoice("Return to the fire.", modExit);
+}
+
+
+
+main();

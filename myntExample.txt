@@ -10,8 +10,14 @@ function myntTest() {
 	myntQueueHideChoices();
 	myntQueueSay("Mew?");
 	myntQueueDelay(2);
-	// The options for transitions are: 
-	// default, blush, fake, pained, sad, serious, angry, crushed, dizzy, lewd, protocol, septrica, shock, surprised, tilde, um, sleepy, suspect, tinysmile, unimpressed
+	// The options for transitions are:
+	// Protocol
+	// protocol, protosurprised, offline
+	// Mynt
+	// default, blush, pained, sad, serious, angry, crushed, dizzy, lewd, protocol, shock, surprised, tilde, um, sleepy, suspect, tinysmile, unimpressed, crushed, shock
+	// Mint
+	// fake, mintangry, mintsad
+
 	myntQueueTransition("angry");
 	myntQueueSay("Why have I been summoned!");
 	myntQueueDelay(2);
