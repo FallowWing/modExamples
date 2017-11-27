@@ -1,0 +1,11 @@
+var possible = [];
+for (i in 0...Main.tempSprites.length) {
+	var spr = Main.tempSprites[i];
+	if (spr.width == 800 && spr.height == 600 && spr.animated) possible.push(spr);
+}
+
+var bg = possible[1];
+bg.tint = 0x44FF0000;
+bg.rotation = 90;
+
+msg("Screen rotated...");
