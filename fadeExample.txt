@@ -1,0 +1,25 @@
+var fader;
+
+function main() {
+	clear();
+	append("This is going to fade");
+	addChoice("Next", function () {
+		fader = addRectSprite(800, 600, 0x000000, true);
+		fader.alpha = 0;
+		fader.layer = 999;
+		tween(fader, {alpha: 1}, 1, {onComplete: next});
+	});
+}
+
+function next() {
+	tween(fader, {alpha: 0}, 1, {onComplete: fader.destroy});
+	clear();
+
+	Main.topBar.visible = false;
+	Main.choiceBox.visible = false;
+	disablePause();
+	append("This concludes the test");
+	addChoice("Bye", modExit);
+}
+
+main();
