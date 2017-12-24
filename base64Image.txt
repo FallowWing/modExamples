@@ -1,9 +1,11 @@
 function main() {
 	clear();
 
-	var s = addSprite("custom_art");
-	s.x = 100;
-	s.y = 100;
+	// var s = addSprite("custom_art");
+	// s.x = 0;
+	// s.y = 0;
+	// s.layer = 1;
+	Main.background.setupAnimated("custom_art");
 
 	addChoice("Leave", modExit);
 }

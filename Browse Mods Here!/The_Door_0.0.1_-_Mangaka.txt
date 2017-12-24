@@ -1,0 +1,237 @@
+
+//This is where you list your variables and set them to the default
+var Age = "???";
+var Name = "Player";
+var hasCock = false;
+var hasCunt = false;
+var hasBoobs = false;
+var isMale = false;
+var isFemale = false;
+var lastCodeRun = "";
+
+//This is a different style entirely
+//You have one master function (called main here) and at the very top you call clear();
+//Instead of every addChoice taking you to a different function, it just sends you back to this main one, but with a different string
+//That string is called seg, and it is your passage names
+//You can see below I have if (seg == "cave") and if (seg == "lieDown") and so forth
+
+function main(seg) {
+	clear();
+
+	
+	if(seg=="beginning") {
+		myntQueueTransition("dizzy");
+		showMynt();
+		myntQueueHideChoices();
+		myntQueueSay("Uuuuuuu....");
+		myntQueueDelay(1.30734);
+		myntQueueTransition("surprised");
+		myntQueueSay("Oh, hey! You've loaded a mod!");
+		myntQueueDelay(.5);
+		myntQueueTransition("um");
+		myntQueueSay("\"The Door\"");
+		myntQueueSay("Sounds boring, are you sure you want to play?");
+		myntQueueAddChoice("Yes. I've heard it's EXTREME!!!", function() {main("fullMod");});
+		myntQueueAddChoice("How bad could it be?", function() {main("fullMod");});
+		myntQueueAddChoice("Well, maybe not the crazy parts...", function() {main("vanilla");});
+		myntQueueAddChoice("No, get me out of here!", modExit);
+		myntQueueShowChoices();
+	}
+
+	if(seg=="fullMod") {
+		myntQueueHideChoices(); // You don't really need to hide and show the choice box this often, it's just for effect
+		myntQueueTransition("unimpressed");
+		myntQueueSay("Whatever you say...");
+		myntQueueDelay(2);
+		myntQueueTransition("protocol");
+		myntQueueSay("Welcome to The Door. Generating default player model...");
+		myntQueueShowChoices();
+		myntQueueCall(function() {main("customizeSettings");});
+		myntQueueCall(hideMynt);
+	}
+
+	if(seg=="vanilla") {
+		myntQueueShowChoices();
+		myntQueueCall(hideMynt);
+		addChoice(function() {main("x");});
+	}
+
+	if (seg == "init") {
+		//This is where you set your variables to their default
+		Age="???";
+		Name="Player";
+		Species="player";
+		hasCock=false;
+		hasCunt=false;
+		hasBoobs=false;
+		isMale=false;
+		isFemale=false;
+		lastCodeRun="intro";
+		main("beginning");
+	}
+
+	if(seg=="customizeSettings") {
+		append("Hi, "+Name+"! You are a "+Age+"-year-old "+(isMale && isFemale ? "bigender" : isMale ? "male" : isFemale ? "female" : "agender")+" "+Species+" with a "+(hasCock && hasCunt && hasBoobs ? "cock, cunt, and boobs." : hasCock && hasCunt ? "cock and cunt." : hasCock && hasBoobs ? "cock and boobs." : hasCunt && hasBoobs ? "cunt and boobs." : hasCock ? "cock." : hasCunt ? "cunt." : hasBoobs ? "boobs." : "great big nothing between your legs ^_^"));
+		
+		addChoice("Change Name",           function() {main("setName");});
+		addChoice("Change Age",            function() {main("setAge");});
+		addChoice("Change Gender",         function() {main("setGender");});
+		addChoice("Change Species",        function() {main("setSpecies");});
+		addChoice("Change Junk",           function() {main("setJunk");});
+		addChoice("All done! Move along.", function() {main(lastCodeRun);});
+	}
+
+	if(seg=="setAge") {
+		append("How old are you?");
+		addTextChoice(function(str) {Age=str; main("customizeSettings");});
+	}
+	
+	if(seg=="setName") {
+		append("What's your name?");
+		addTextChoice(function(str) {Name=str; main("customizeSettings");});
+	}
+
+	if (seg == "setGender") {
+		append("What are your pronouns?");
+
+		addChoice("He/him", function() {
+			isMale=true;
+			isFemale=false;
+			main("customizeSettings");
+		});
+
+		addChoice("She/her", function() {
+			isMale=false;
+			isFemale=true;
+			main("customizeSettings");
+		});
+
+		addChoice("They/their", function() {
+			isMale=true;
+			isFemale=true;
+			main("customizeSettings");
+		});
+
+		addChoice("It/its", function() {
+			isMale=false;
+			isFemale=false;
+			main("customizeSettings");
+		});
+	}
+
+	if(seg=="setSpecies") {
+		append("What's your species?");
+		addTextChoice(function(str) {Species=str; main("customizeSettings");});
+	}
+
+	if (seg == "setJunk") {
+		append("So, what kinda junk d'ya got?");
+		if(hasCock == false)
+			addChoice("Cock", function() {
+				hasCock=true;
+				main("setJunk");
+			});
+
+		if(hasCunt==false)
+			addChoice("Cunt", function() {
+				hasCunt=true;
+				main("setJunk");
+			});
+		if(hasBoobs==false)
+			addChoice("Boobs", function() {
+				hasBoobs = true;
+				main("setJunk");
+			});
+
+		addChoice("Everything", function() {
+			hasCock=true;
+			hasCunt=true;
+			hasBoobs=true;
+			main("customizeSettings");
+		});
+		
+		addChoice("Actually, I don't have any of these...", function() {
+			hasCock=false;
+			hasCunt=false;
+			hasBoobs=false;
+			main("customizeSettings");
+		});
+
+		addChoice("Okay, I'm ready!", function() {
+			main("customizeSettings");
+		});
+
+		addChoice("I'm all hot and it's bothered me. Reset Junk?", function() {
+			hasCock=false;
+			hasCunt=false;
+			hasBoobs=false;
+			main("setJunk");
+		});
+	}
+
+
+	if (seg=="intro") {
+		append("It's dark this night on the shoreline. The fabricated, pixelated skybox stars glimmering, overshadowed by the blooming glow of that great big balloon of cum we call a moon hanging in the sky.");
+		addChoice("Head into the cave", function() {main("cave");});
+		addChoice("Lie down in the sand and gaze at the night sky", function() {main("lieDown");});
+		addChoice("Change Settings", function() {
+			lastCodeRun="intro";
+			main("customizeSettings");
+		});
+	}
+
+	if (seg=="cave") {
+		append("");
+		addChoice("", function() {main("x");});
+	}
+
+	if (seg=="lieDown") {
+		append("You lie down and gaze at that massive white orb suspended above it all, imagining how it would feel to lose yourself in such a gigantic mass of white heaven like that.");
+		addChoice("Alright now head into the cave", function() {main("cave");});
+		addChoice("Stay here and moonbathe", function() {main("sceneOneMasturbate");});
+	}
+
+	if (seg == "x") {
+		append("Welp, you've reached something that hasn't been defined yet.");
+		addChoice("Restart", function() {main("intro");});
+		addChoice("Quit.", modExit);
+	}
+
+	if (seg=="sceneOneMasturbate") {
+		append("The alluring power of the moonglow overcomes your ambitions of doing anything else right now but lie here in the sand and stare upward, mesmerized by the great expanse of white. The sand under your heels is soft and white as the reflected light above, its fine texture easing you into the embrace of each of the tiny little grains.");
+		
+		if(hasBoobs==true) {
+			append("Yearning for more, you give in to the naturally erotic physicalities of your surroundings and slide your top up over your shoulders, shifting the surface directly beneath your shoulder blades. Arching your back and digging your shoulders into the grain, your hands make their own way up to your chest, gently caressing each of your tits, squeezing, pushing and pulling slowly, up toward your collarbone--down to your sighing diaphram. Over and over, like a pillow. On one push upward, you let your grip slip and your nipple tickles the palm of your hand as your supple flesh falls back to its resting place on top of you. \n\nYour free hand hungering for more, two fingers play footsie with your lips, their tips tenderly jabbing at the thin gap in your sighs until your middle one hooks itself inside and yanks your lower lip down upon pulling out, letting it smack up back against your other lip with a satisfying smack as your hand slides down your torso and tunnels beneath the defenses of your bottoms.\n\n");			if(hasCock==false && hasCunt==false)
+				append(" As you reach down into your pants, you remember that you don't have anything but a barren mound of flesh between your legs, and the few prods of your fingers merely stroke your taint. You sit up and work your bottoms off anyway before lying down and basking in the moonlight like those cubs you passed at the Floatillery, taking as much of the cool night in until you're satisfied. Then you set your course for the cave.");
+		}
+
+		if(hasCunt==true) {
+			append("You undress yourself, letting all of your clothes mix in with the water-smoothed glass and grains of stone as you now lie naked in your own sand angel, produced by all the kicking and awkward thrashing you had to do to get those dirty rags off of you without getting up. You work your middle finger up into your tight ass and feel the moist drip of your own juices glance against your finger from above. As if a cue to convince yourself that you are really ready for it, you let that clear liquid drip all the way around your finger and down before you jam your thumb up into your babyhole all at once. As your familiar friend gives you a taste once again, an irrepressible moan of pleasure escapes through your lips. \n\nSensing your approval, your little Thumbkin sets its sights on an even higher mountain of achievement, spontaneously curling up inside you completely and digging into the folds of your inner walls, pulling against the ring of an entrance outward from the inside. Its efforts encourage a tiny spurt of urea to wet the sand as your face contorts, teeth clenching and eyes shut tight.");
+			addChoice("Go on?", function() {main("sandInsertion");});
+		}
+
+		if(hasCock==true && hasCunt==false) {
+			append("You take the opportunity to undress yourself, reaching into your clothes and tearing deep gashes into them, tossing them aside like the useless rags they are. The sand seems to creep up between your asscheeks and you clench hard, only lodging them deeper up your crack. Their intrusive, parasitic presence from being held in place by your involuntary reactions itches your nether region into action, hardening quickly.");
+			addChoice("Treat that animal like it deserves", function() {main("sceneOneJackoff");});
+		}
+
+		else if(hasBoobs==false) {
+			append("The wide white glow of the void suspended above you, combined with the soft hum of the lapping waves, consumes your focus. Everything gradually falls away as you relax. \n\nCompletely immersed, the whispers of each of your partners invade your ears as you begin to hallucinate. Every sense of time falls away too, and when you finally come to your senses, you're buck naked, body glistening from the drool you've spread all across your body in a captivated stupor. You leave your dirty rags on the seashore to be taken up by the waves and carried off the edge, making its own journey, perhaps not unlike the one you're taking by going into this cave.");
+		}
+
+		addChoice("Head into the cave.", function() {main("cave");});
+	}
+
+	if(seg=="sandInsertion") {
+		append("Uncurling just enough to ease out of your holes, you sit up, legs spread diagonally and gaze into the mirage of shifting sands like waves, reaching out toward them and leaning forward like a trance-induced gymnast. Your fingers sink all the way up to just before your wrist in the sand, scooping up the wet stain your pleasures have caused and bringing it right back where it belongs, stuffing it all into your inviting love tunnel, forcing the fine grains deeper and deeper up inside you as you finger yourself. When no more seems to be going in, you simply lean forward and shovel yourself some more into your snatch, fingering it again and again. Even sand as fine as this decades-old coast starts to rub you roughly from its compactness and constant urges deeper. As it starts to build up to its limits in your innards, packing together like a solid sandcastle tower as it absorbs your juices, you start having to use more fingers to get it deeper. \n\nYou near the point where you would have to fist yourself to get it any deeper, and instead you start thrusting your four fingers in and out, leaving your thumb hooked up and covering your clit as you pump the coarse sand dildo deeper and shallower inside you. It's unlike anything you've ever experienced before, sending you over the edge much faster than your own touch alone does. After you recover from the afterglow, you get up and start to amble toward the cave's puckered mouth, sand dripping out of your aching, dripping cunt gradually as you walk.");
+		addChoice("Head inside", function() {main("cave");});
+	}
+
+	if(seg=="sceneOneJackoff") {
+		append("You grasp your excited member firmly, giving it the beating it's begging you for. Like a good bitch, it lubes itself up for you and as you edge yourself closer and closer, your back arches, raising itself off of the sand while digging your head and feet little pits from all your thrashing, as well as squeezing your ass sand harder between your firmly clenched cheeks. When you can't hold it back any longer, you suddenly spring forward right up onto you feet and cum violently out onto the previously barren white sand. Finished, you marvel at the power of your masterpiece: some of it landed farther away than you are tall, and that's an achievement. When you finish your prideful, hands-on-hips admiration, your form loosens up and you peer into the cave you had discovered earlier, digging out the sand embedded in your cheeks on the way.");
+		addChoice("Next.", function() {main("cave");});
+	}
+
+}
+
+main("init");

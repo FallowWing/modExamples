@@ -1,0 +1,350 @@
+function main() {
+	clear();
+	append("You're walking all alone out in the forest, happy as can be. It's rather quiet, minus the distant sounds of sex and orgasm that you learn to tune out after a while. It's like it's all they ever do after all! Either way, you hear some rustling from nearby, followed by some faint little squeaks from around a tree. You don't think you're alone anymore, if you ever were.\n\nBefore you can even stop to think, you suddenly see a little opossum girl come round the corner, couldn't be older than eleven or twelve. The little one seems to be wearing a vastly oversized green coat that drags on the grounds around her, and covers up her little hands. She seems to have her nose to the ground and holding a little magnifying glass in her tail, looking through it as she looks along the ground. She squeaks to herself quietly as she stops right next to you, seemingly not noticing you as she lifts up her top some and pulls a notepad out of her pouch, writing something down. You get a quick glance at it as she walks by. It has a bunch of random scribbles about a puppy, cookies, and a Fishing rod. It's signed in the top right corner as \"Millie, Investigator extrodinaire.\"\n\nIt's kinda awkward how she just doesn't even seem to notice you......... Perhaps you should do something to get her attention?");
+	addChoice("......... Hello?", hello);
+	addChoice("Scream loudly and suddenly, without any warning", scream);
+	addChoice("Casually masturbate and see if she notices", masturbate);
+}
+
+function hello() {
+	clear();
+	append("You whisper a nice friendly hello to her! She jumps almost immediately, not noticing you in the slightest!\n\n\"Oh! Hiya there! I didn't notice you......... E-Err, Sorry!\" She squeaks out, obviously quite embarrassed, before her eyes go wide and she jumps suddenly, as if she remembered something!\n\n\"Oh! Oh! Oh! Oh! Oh! Oh! Oh! Oh! Oh! Have you happened to see a small orange pup around here? Green ears? A bit taller then me? Probably a bit older? He has committed Crimes of the Highest degree and I'm going to find him and bring him to justice!\" It's honestly rather adorable, considering this is a little cub girl saying all of this, but she seems eager to hear your response.");
+	addChoice("Nope", no);
+	addChoice("No?", no);
+	addChoice("Can puppies even be orange?", no);
+}
+
+function scream() {
+	clear();
+	append("You let out a terrifying roar like a feral animal! (as good as a Player could do, at least). You still somehow manage to scare the pants off of her as she drops her little magnifying glass to the ground, falling right back onto her bum and scooting right away.\n\nIt's obvious she's quite scared of you, especially by her little squeaks and panicked scooting back. Her oversized coat dragging on the ground, the magnifying glass right by your feet.\n\n\"H-Hey th-there! P-Please d-don't......... D-Don't h-hurt m-me o-or anything......... P-Please, H-have m-mercy!\" she squeaks out, on the ground in front of you. This is probably gonna end up going one of two ways. The Easy way, or the Hard way.");
+	addChoice("Be polite and give the little one her magnifying glass back", polite);
+	addChoice("......... \"The hard way\" WARNING: Aboose, Watersports, Blood!", hardway);
+}
+
+function masturbate() {
+	clear();
+	append("You casually start rubbing you shaft as she walks past you, nose still against the ground as she......... Looks for clues? You think? Her coat is covering her up for the most part, and you can't exactly see much over her exposed fur, let alone an Outline of anything.\n\nAfter tracking around some, she does, however, stop in front of a tree and squat down to look at a Stick or Leaf or something. She lifts up her tail a bit higher, lifting up the back of her long jacket just enough for you to get a look at the outline of her little bum in her shorts, showing off her curves some.........\n\n......... She stands up after a moment, and turns around, immediately catching glance of you. You and her both lock eyes for a moment, before she looks down to notice that you have your cock in your hand and you're staring at her. She squints a bit in obvious disgust. She slips the Magnifying glass into her hand, then in her pouch. She seems to be digging around for something with a rather angered look.");
+	addChoice("Play the innocent card and hope for the best!", femdom);
+}
+
+
+function no() {
+	clear();
+	append("She sighs and droops down, before setting down in the dirt below her with a pout, sighing some as he looks down into her lap, dropping her magnifying glass into the dirt with a thud as she curls her little tail around her\n\n\"Let's face it, I'm never going to find him. He's probably long gone by now......... I'm never going to get back what he stole from me.\" She holds her face in her hands, sniffling some and crying. \"What's even the point if I can't even find one criminal!\" she spouts out, before using her tail to wipe some tears from her cheeks......... all before finally noticing that flying name above your head. Her face grows even sadder.\n\n\"A-And n-now the Player th-thinks I-I'm a C-Crybaby!\" She squeaks out, crying even more now, sinking even lower than before. You can't help but feel bad for such a little one");
+	addChoice("Sit down next to her and give her a hug", hug);
+	addChoice("Laugh (You monster)", laugh);
+}
+
+
+
+function polite() {
+	clear();
+	append("You scoop up her rather nice magnifying glass and walk it over to the little shivering opossum girlie, holding it out to her. It's just then when she notices that you're the player, and sits right up, letting out a few little squeaks of appreciation as she grabs her magnifying glass right up.\n\n\"O-Oh my G-G-Goodness! I-I'm so s-sorry! I d-didn't e-even realize y-you w-were......... S-Sorry!\" Great, now you've got a flustered little opossum. She immediately hugs your leg rather tightly, head nuzzling against your thigh. She makes a little few squeaks as she huddles closer to you, obviously quite apologetic. He tail curls around your other ankle as she nuzzles her cheek against you. She's nuzzling rather close to your crotch.");
+	addChoice("Squat down so you can give her a real hug", squat);
+	addChoice("Flop out your monstrous cub destroyer and ask her to polish it for you", cubdestroyer);
+}
+
+function hardway() {
+	clear();
+	append("You stomp your way over to her, grabbing up that dumb magnifying glass on the way as you stand over her cowering, shivering little body. She closes her eyes tightly as you rip off her shorts in one fell swoop, seeing as they were already a bit too big on her. You hear her squeak a bit more as she covers up her eyes, a small pool of piss forming underneath you as she pisses herself in pure fear.\n\nHer little panties are soaked now with urine as she shivers underneath you. She's now even making any attempt to escape now. You tighten your grip on the magnifying glass. You should probably be a gentleman and give that back to her, Hm?");
+	addChoice("Give the scared little one her Magnifying glass back", hardway2);
+}
+
+
+
+function femdom() {
+	clear();
+	append("Before you can even spit out some witty response, you feel something heavy collide with your head. You immediately recoil and fall backwards from the heavy hit, plopping down onto your back with a thump. You hear her skitter over and immediately pin you down with her body, straddling your upper chest with her little body. In her right hand is a Fishing pole.........? Strange choice of weaponry, but it did the trick on you, after all.\n\n\"I know your kind, pervert! You probably just thought I was some sweet little Opossum, But I'll have you know, I won't let you get away with this!\" She spouts out, a whole new look on her face as she sits above you. Her coat hanging over you as she straddles you. You can almost smell her puss from where you are.\n\nYou feel her make little grinding motions against you as she digs around in her pouch. Now might be your only chance. If you play your cards right, this might end up Very very well in your favour.");
+	addChoice("try to bargian for your release", bargain);
+	addChoice("Tell her you need direct medical attention to your crotch or you'll go into shock", medic);
+}
+
+
+function hug() {
+	clear();
+	append("You slip down next to the crying little Millie and give her a tight hug. She sniffles and cries for a moment before hesitantly hugging back, gently wrapping her arms around you. She stays rather silent, except for her little sniffles and squeaks. The both of you stay hugging on the forest floor for quite a while, until you don't know how much time has passed. She wraps her tail around you as she slowly stops crying, before placing a rather sheepish kiss on your cheek.\n\n\"I-I'm so sorry......... Y-You d-didn't have t-to do that......... Y-You kn-know.........\" She pulls back a little bit, smiling. She scoots around a little bit, keeping her tail around you as she blushes a little bit. \"Th-That was the nicest th-thing anyone h-has ever done for me......... I......... I-If you wanna do anything w-with me, I s-suppose I owe you, h-huh?\" ");
+	addChoice("A Hug", hug);
+	addChoice("A Kiss", kiss);
+	addChoice("Swigity Swoogity, Gimme da Booty", booty);
+}
+
+function laugh() {
+	clear();
+	append("She cries even louder, before slowly crawling to her feet. She shakes and shivers as she sniffles, before running off, out of view, Dropping her belongings as you torment her.\n\nSmooth. Very smooth.");
+	addChoice("End", modExit);
+}
+
+
+function squat() {
+	clear();
+	append("You squat down and hold her close in a real hug, before you plop down next to her and wrap your arms around the little one. She squeaks and nuzzles you closely, tail wrapping around you some. It takes her a moment for her to squeak up.\n\n\"I-I'm so sorry......... Y-You d-didn't have t-to do that......... Y-You kn-know.........\" She pulls back a little bit, smiling. She scoots around a little bit, keeping her tail around you as she blushes a little bit. \"Th-That was the nicest th-thing anyone h-has ever done for me......... I......... I-If you wanna do anything w-with me, I s-suppose I owe you, h-huh?\" ");
+	addChoice("A hug", hug);
+	addChoice("A Kiss", kiss);
+	addChoice("Swigity Swoogity, Gimme da Booty", booty);
+}
+
+function cubdestroyer() {
+	clear();
+	append("Cub destroyer? Classy. Either way, you flop out your cock and it nuzzles up against her other cheek already half hard. She looks up at you suddenly, cutely shivering as she realizes you're smiling down at her with your cock against her face. She blushes as you ask her to polish it for you.\n\n\"W-Well, Y-You a-are a pl-pl-player, I guess......... I-I g-guess I c-can g-give y-you a f-few l-little l-licks.........\" She looks up at you as her long opossum tongue snakes out her mouth as she laps along your head, her tail wrapped around your ankle as she lifts it up some to give you a little kiss on the head, smiling up at you cutely and making little squeaky murrs as she starts to lick down your shaft.\n\nShe continues to slobber all over your \"Cub destroyer\" for a while, until it shines with her spit. \"I-is this alright? D-Do you like this?\"");
+	addChoice("Yep! Don't stop now!", flusterlick);
+	addChoice("Why don't you suck on it a little bit?", flustersuck);
+	addChoice("I think it would be a bit better if you let me put it between your legs.", flusterfuck);
+}
+
+
+function hardway2() {
+	clear();
+	append("You rip off her urine soaked panties, getting a nice look at her little reddened opossum puss and hold the magnifying glass by the circular end, before shoving the handle deep inside of her little peach. She lets out a horrible scream in response, her legs kicking and her tail wrapping around your ankle, trying to push you away in vain from her as her little puss bleeds slightly from the sudden insertion.\n\n\"H-Haaggaah! P-P-Please! I-It h-hurts! S-So M-Much! T-Take i-it out! I c-can't d-d-dooh......... G-Gaah!\" She can barely speak, covering up her eyes and shivering in pure fear as she cries. You could do what she asks and replace it with something a bit more Organic, or simply leave it in and make use of that little mouth.");
+	addChoice("Oh, I'll take it out alright", takeitout);
+	addChoice("No. Now open wide", fuckherface);
+}
+
+
+function bargain() {
+	clear();
+	append("You beg and tell her you'll do \"anything\" to get released without police involvement (Are there police on the island? Probably off taking turns taking it in the bum if there was.) She thinks for a moment, rubbing her chin some as she holds you down.\n\n\"Fine.\" She pulls off of you some, keeping one foot on you to keep you in place as she slides off her shorts and panties in one clean tug, leaving her opossum puss on full display. You quickly get a better look at it as she straddles your face, your nose just pressing up against her cubby love button, her juices dribbling over your lips, tasting sweet as they drip into your mouth. You look up to see her stern face looking right back down at you. \"Lick.\"\n\nIt's a rather simple order, and you don't think you have much of a choice. She's already grinding up against your lips some anyways. You don't think it would be very wise to resist now.");
+	addChoice("Lick like a good toy", bethetoy);
+	addChoice("Resist to the brutal end", resist1);
+}
+
+function medic() {
+	clear();
+	append("She pauses a moment. \"You're kidding, right? I'm not an idiot, you know. You're just some perverted fuck who wants to get a quick handy from a little opossum like me.\" She says angrily.\n\nYou start to give up hope in your master plan for a moment......... Before suddenly everything goes dark. It seems you now have something covering up your face. You feel two legs around your head, and smell something......... distinct. It seems you're being facesat by the little Millie. She grinds her wet shorts against your face.\n\n\"Had to shut you up somehow for this.\" You feel two small hands working their way to your crotch, down your belly, before you feel them gently pull out your shaft, gently working it. She lets out a couple little murrs as she toys with your length, before gently stroking it up and down.");
+	addChoice("Moan into that puss", medic2);
+}
+
+function hug() {
+	clear();
+	append("\"A h-hug? R-Really? After we j-just hugged?\" she pauses......... \"I m-mean, if that's wh-what you really wanted.........\" She gently wraps her little gray hands around you as she tugs you closer, her little fuzzy opossum body pushing up against you. she nuzzles you closely as she squeaks quietly, almost grinding against you as she hugs.\n\nYou can definitely tell she was expecting a lot more then a hug as you hold her close. You can feel her shorts have a little growing wet spot in the front as she grinds against you. She's not going to say anything though, so you suppose you only really have one choice here.");
+	addChoice("Millie?", milliealright);
+}
+
+function kiss() {
+	clear();
+	append("She blushes quite a bit, obviously really flustered now! \"O-Oh? A k-Kiss?\" She pauses, rubbing her little hands together in front of her, before pulling her jacket closer around her before giving you a little meek smile.\n\n\"I-I m-mean, if that's what you want......... Th-Then I suppose it's alright~\" She smiles some before she meekly leans forward and tugs you into a rather tight passionate kiss, innocently holding back some, letting you take the lead. She gently puts her paws along your chest and rubs down towards your groin.");
+	addChoice("Let her go", lethergo);
+}
+
+function booty() {
+	clear();
+	append("Her eyes go rather wide in surprise as you ask for something so lewd. She blushes wildly and lets out a few little squeaks. \"W-Well, I-If th-that's what y-you want!\" She stands up and turns around, fiddling with her shorts some and lifting up her jacket with her tail to show off her little panty covered bum before slowly tugging them down, letting you see her fully exposed tail end. She looks back at you over her shoulder, obviously quite embarrassed.\n\n\"I-Is this what you w-wanted? I m-mean, I-I o-owe you.........\" She's obviously quite uncomfortable, but now on full display for you. You could probably just have your way with her if you wanted.");
+	addChoice("Take that bum", takethebum);
+}
+
+
+function flusterlick() {
+	clear();
+	append("She nods a few times before eagerly licking along your shaft some more, drooling all over at you feel it throb around her tongue. It's obvious you're gonna come rather soon just from how cute the little opossum girl is. She squats just a little bit lower so she can lick along the base of your shaft, still squeaking every so often as your cock throbs.\n\nYou notice her prehensile tail slip up between her legs, rubbing at her crotch some , obviously turned on just from licking you. She shivers as she looks up at you, giving you some rather wide cute little green eyes, practically begging for it now as she speeds up her little licks, licking around your head, then your shaft, then your base, all the way down to your balls. You then hear a little quiet held back moan from her.........\n\n......... You can't hold back much more.");
+	addChoice("Cum all over that pretty face", flustercumon);
+}
+
+function flustersuck() {
+	clear();
+	append("She gulps. \"On your......... D-Does it taste alright? Will it hurt?\" She mutters out. After a bit of gentle encouragement, she nods and slowly takes your head in her small warm mouth. She slowly starts sliding down your shaft, looking up at you all the while with those cute wide green eyes as you feel her little tongue flick across your head every so often.\n\nAfter a moment, you feel her reach up and gently grope at your balls, rubbing them in her paw and playing with them gently as her tail wraps around your ankle, as if to say \"I'm not going anywhere.\" She closes her eyes tightly as she gently slides up and down your rod, drooling over it some as she does, your member throbbing, feeling bigger than usual in her tiny maw.\n\n......... You're not gonna be able to hold out much longer.");
+	addChoice("Paint her throat white", flustercumin);
+}
+
+function flusterfuck() {
+	clear();
+	append("She freezes. Great, you broke her. Either way, after a moment of blushing and stuttering, she wiggles around cutely, looking off to the side. \"W-Well, I m-mean, I......... I-I-I g-guess I d-d-do have t-to d-do it f-fo-for you! Y-You're th-the......... Pl-Pl-Player a-after all!\" She is barely able to squeak out as you sit down on your bum. She slowly takes off her shorts and panties with one fell swoop, exposing her little puss. Your cock immediately stands right up for her, pointing up in your lap.\n\nShe holds onto your shoulders some as she positions herself above your cock, her face right in front of yours. She takes quick little breaths and looks off to the side in obvious embarrassment as she slowly starts to drop herself down some, your head just barely slipping into her before you feel her tense up and shiver. She's tight as can be. \"H-Haah! Y-You're s-so big! I c-can't.........\" She starts hyperventilating as she slides lower rather slowly. It's quite obvious she's not going to take some without some Encouragement.");
+	addChoice("Give her some gently nudging", flusternudge);
+	addChoice("Grab her and force her down", flusterbuse);
+}
+
+
+function takeitout() {
+	clear();
+	append("You give that magnifying glass one big yank out before quickly lining up your cock and shoving it right on into her, feeling her warm tight insides squeeze and milk your massive cock. She cries out louder, gently kicking at you, trying in vain to force you away as you start to thrust in and out of her awfully tight peach. She starts to whine and sniffle, throwing her head back in pure pain as you fuck her tight hole.\n\nFrankly, her kicks and pushes and squeals make it all the more enjoyable, making it easier for you to thrust harder into the little cockwarmer. You get a good look at her crying, tearstained face as you pound away at her tight entrance. He tail wraps around you slightly as you continue, it seems she's just about given up.\n\nAfter a good fifteen minutes of hearing her cry out, It's probably best to change her up, so in one swift movement, you flip her over onto her belly, hammering into her tight puss puppystyle, shoving her face right into the dirt where it belongs. Her tail makes its way up to your upper chest, trying to push you away still in vain. It's kinda pathetic how simple this all was. Her cries and yelps have turned into little squeaks and murrs, amongst quiet held back moans......... It's about time to finish this.");
+	addChoice("Finish her", finishher);
+}
+
+function fuckherface() {
+	clear();
+	append("You take quick advantage of her open mouth, quickly sliding your massive cock in without pre warning her at all. She gags and chokes as her maw is suddenly filled with your rather sizeable cockmeat. She gags and chokes on your cock wildly, her little throat squeezing it tightly and massaging it as you start to face fuck the little Millie. Her little eyes open and look up at you pleadingly, but you don't offer the little fuckmeat any mercy, of course.\n\nYou continue hammering away at her face for a while honestly. Her drool and spit covers your cock and down her front. You start to fuck her little throat deeper and deeper, to the point where she can't breathe anymore. She gags and chokes, gently tapping your leg in an attempt for you to pull off, which, of course, you have no intentions of doing. You're rather close, after all, and this piece of rapemeat only serves one purpose anyways, to use as a cum dispensary.");
+	addChoice("Cum down her windpipe", cumwind);
+}
+
+
+function bethetoy() {
+	clear();
+	append("You cut your losses and start to lick at her little folds like a good boy, dragging your tongue along her little cubby peach, getting a few little shivers from her as you taste her sweet puss. She gently grinds against your face, rubbing her snatch over your lips and your nose, overpowering all of your senses with nothing but her smell. \n\nAfter a few moments, she really starts to grind and bounce against your face. \"Mnnnhh, If you're gonna want to get out of here, you're gonna have to do a lot better then......... Th-That!\" She lets out a rather high pitched squeal as you seem to find the sweet spot inside of her. Her little twitches and grinds get a bit more sporadic as you start to really get to her, her sweet juices spilling and coating over your cheeks with her girlie juices.");
+	addChoice("Make her Squirm", makehercum);
+}
+
+function resist1() {
+	clear();
+	append("You hear some rather upset opossum noises as she starts to pick her hips up off of you......... You're free, you guys......... That is, until she suddenly drops back onto your face, nearly smashing your nose with the amazing force of her little hips. You swear you feel your nose bleeding slightly just from the force of her dropping onto you. She pulls off once more and turns around on you, so you can get another good look at her, she's not messing around. \n\n\"You sure you wanna try that again, Lawbreaker?\" she says, rather confidently as she holds out some of her fishing wire. She does not seem happy at all. It would probably be best just to go with her demands at this point.");
+	addChoice("RESIST! I DON'T NEED TO BREATHE! Warning:Watersports, Snuff", resist2);
+	addChoice("G-Give in and lick her!", bethetoy);
+}
+
+
+function medic2() {
+	clear();
+	append("You let out a long winded moan into her shorts as she jerks off and toys with your long length. It seems she's just playing with you now, stroking you quick enough to keep you hard, but not fast enough to provide you any real pleasure. You can't help but hump and buck up into her grip, trying to egg out the most of this that you can. Her tiny hands glide and grind over shaft a bit quicker now. \n\nYour member starts to throb after a good little bit of stroking, her little movements growing faster and faster around your cock. You swear you can hear her little breaths and pants grow a bit louder as she leans forward some on you, her shorts leaking like crazy, you can't help but just take a little lick of the soaked fabric, getting a loud rather desperate sounding moan, almost pathetically so.\n\nIt's right about then that you feel her little lips wrap around your head, and you hear a few little squeaky murrs of desperation as she slides down your member, already trying to deepthroat it to her own accord.\n\n");
+	addChoice("This was unexpected", medic3);
+}
+
+
+function milliealright() {
+	clear();
+	append("You whisper to her as she grind against you......... She lets out a little squeak and looks up at you, with little wide eyes. \"Y-Yes?\" She's desperate and it's really painfully obvious. She nods, knowing what you're getting at, and immediately sighing, tugging down her little shorts, showing off her tight undies before tugging those down as well, looking up at you in desperation.\n\n\"P-Please, player.........\" You can't help but already be hard at the little sight of a desperate little Millie practically begging you to fuck her. She plops down on the ground and spreads her legs for you, ready to take whatever you want to give her.");
+	addChoice("Plough that puss", ploughthatpuss);
+}
+
+
+function lethergo() {
+	clear();
+	append("You let her go on her own, letting her kiss you to her own accord a her rather small hand trails down your chest, eventually reaching your crotch, where she rubs it slowly over your bulging pants. She gently teases over your tip, caressing it and rubbing little circles around you as she slowly licks along your lips, cutely squeaking and whining some for you to give her what she really wants.\n\nShe gently slides her hands into your pants, immediately grabbing at your long shaft and starting to stroke it, sitting up onto her knees while she kisses you. Her tail wraps around your wrist and brings it to her snatch. You can guess why, as you gently play with her peach in your fingers, spreading her apart before sliding a finger in, getting a shuddering squeal out of her immediately.");
+	addChoice("Now things are heating up", lethergo2);
+}
+
+
+function takethebum() {
+	clear();
+	append("You can't resist, you just reach out and grab at that bum without waiting a second. Her tail lifts out of the way immediately for you, letting you toy with her fuzzy plump opossum cheeks. They're plump, and just bout big enough to fill your hand fully. She holds up her little jacket a bit higher, shivering some as you spread apart her plump cheeks.\n\nShe moans slightly as you get a look at that pretty little pucker, all tight and ready for whatever ya wanna give to it. Frankly, the sight of the young little opossum spreading her cheeks alone is enough to send you over the edge on its own, but you think you could probably do a bit more then that. Something a good bit more lewd.");
+	addChoice("Surprise Buttsex", surprisebuttsecks);
+	addChoice("Lick that hole", tonguethathole);
+}
+
+function flustercumon() {
+	clear();
+	append("You just can't hold back as you unleash a torrent of cum onto her pretty opossum face. She closes her eyes tightly as you do, cum getting all in her face fuzz, painting her grayish white fur with your thick musky seed. She lets out a loud couple of squeaks you cover her up, before she takes a small bit on one of her fingers, gently sucking it off to get a taste of your strange seed.\n\n\"H-Huh......... It's t-true what they say then......... P-player seed taste m-much better th-then Islanders!\" She say's rather excitedly, rubbing it into her face fuzz some, She seems......... Oddly excited! \"Oh! Th-Thank you, thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you! Thank you!\" She says, running away quickly.........\n\nWhat a perculiar girl.");
+	addChoice("End", modExit);
+}
+
+
+function flustercumin() {
+	clear();
+	append("You can't help it anymore, you grab her head tightly and shove your cock right down her throat, shoving a few thick globs of player seed right down her gullet. Her eyes shoot open as she tries to swallow it all, but a good bit pours into her mouth, dribbling from her lips as you pull out and away. She lets out a few little squeaks as she brings her paws to her mouth to catch the little bit that slid out of mouth, wiping it up some.\n\nShe looks up at you, giving you a big cummy open mouth smile, showing off how white the inside of her mouth is. She gulps it down, rather proudly, before giggling some. \"Th-That......... Was nicer th-then I expected it! I-I'll have to remember that f-for next time!\" She squeaks out, immediately pulling out her notebook again......... She gives you a quick kiss on the cheek before running off. \"Th-Thank you again!\" And before you know it, She's off around a tree.");
+	addChoice("End", modExit);
+}
+
+
+function flusternudge() {
+	clear();
+	append("You put a reassuring hand up on her along with a polite smile and a few nice words of encouragement. \"Th-Thank y-you.........\" She squeaks out, giving you a little smile as she starts to slide down lower until she has about three fourths of your massive schlong inside of you. She shudders and shakes as you hold inside of her, her tight tunnel twitching and squeezing your cock like a sextoy, but even better. She squeaks once or twice before pulling up until she has about a fourth of you inside, before she drops back down\n\nShe slowly picks up a nice smooth rhythm, bouncing on your cock like it was what she was made for, filling out the whimpering cocksock role pretty nicely as she bounces on you. You can't help but buck into her cute bounces, sliding in more and more of your length with every thrust. She closes her eyes and throws her head back, Her whines growing a bit louder as your member throbs inside of her.\n\n\"O-Oh G-Goodness, P-Please, M-More! I l-love......... L-L-Love it! E-Every b-bit of i-it i-in-inside me!\" She squeals out for all to hear, her higher pitched voice echoing around in the forest as her little peach squeezes and contracts around you, convulsing and massaging your member as she makes her way through one helluva orgasm.\n\n......... You're not gonna be able to hold out much longer");
+	addChoice("Hnnnnnnnnng!!!!!!!!!", cumnice);
+}
+
+
+function flusterbuse() {
+	clear();
+	append("You're......... Not gonna have any of this. You put your hands on her shoulders, rather gently in fact. She looks at you with a bout of confusion through her pained expression, before you slam her down all the way to your hilt, every inch of your throbbing meat slamming into her at once. She goes dead silent for a bit, mouth hanging open and head tossed back as she process the massive pang of horrible shooting pain she went through, before erupting into a bout of Crying and squealing as your cock practically splits her in half.\n\n\"O-O-Oh G-Gawd! I-it's s-s-so B-Big! P-Pull it out! Pull it out! Pull it out! Pull it out! Pull it out! Pull it out! Pull it out! Pull it out! Pull it out!!!!!!!!!\" She yelps out in terror, but you can barely hear her as her tiny opossum puss squeezes and massages your massive length. You do, however, pull it out some, lifting her up by her shoulders so just your tip is inside of her, before you drop her right back down on you.\n\nYou grab at her hips before you start to forcefully bounce her on your length, her cries and screams growing louder and louder as she tries to pull away, but is unable. She's almost braindead by this point, all of her words and cries being replaced with just sounds and yelps of sheer terror as you rape the poor little Millie, all of it becoming too much for you as her puss tightens around you, squeezing tightly like an iron vice as she reaches some brutal paingasm\n\n......... Yeah, you're can't hold back much longer");
+	addChoice("Cum inside the painslut", cummean);
+}
+
+function finishher() {
+	clear();
+	append("You grab her hips and pump into her at light speed now, continuing to smash her snoot right into the dirt like a good Opossuslut, her cries and squeals muffled as you do. Her tail wraps around your wrist, as if to pull it away......... You'll be having none of that. You grab it roughly and tug back on it mid thrust as you cum inside of her. You can almost hear her tail crack as you yank it out of it's socket. She lies limp in your grip as you cum deep inside of her, filling up her tight puss with your player seed.\n\nShe crumples to the ground as soon as you let go of her, either passed out, playing dead, or actually dead. Either way, she's not moving, not that it really matters, the whore. You go ahead and spit on the girl as she lies in the dirt before tracking off, leaving her.");
+	addChoice("End", modExit);
+}
+
+
+function cumwind() {
+	clear();
+	append("You slam her face down as you cum right down her throat, choking her with how much goes down......... She gags and coughs and tries to push you away as you choke her on your massive cock. Her eyes look up at you in fear as she quickly starts getting weaker and weaker before she slumps down and passes out on your cock. Only then does she stop resisting and only then, do you let go. She slumps off your cock limply, plopping into the dirt. \n\nShe probably didn't actually die or anything, probably just is playing dead or couldn't breathe or some shit, either way, not your problem anymore. You simply move along, leaving the Cockslut Millie there to probably get groped and raped by some Vultures after you leave.");
+	addChoice("End", modExit);
+}
+
+
+function makehercum() {
+	clear();
+	append("You dig your tongue deep inside of her little opossum puss, dragging it along as your nose pushes up against her love button. Her squeals and squeaks grow louder as she shivers above you, quickly giving into a rather shaky intense orgasm.\n\nYou get a nice faceful of sweet girlie juices, pouring over your cheeks as she intensely orgasms, her whole body shivering as she lies over you, a horrible mess. It all tastes rather amazing and thin, her puss spasming around your tongue before she pulls off, shaking her hips some and standing up. \"Th-That......... Th-That was a-acceptable.\"\n\n\"I......... I s-suppose you've earned the r-right to walk......... G-Good day.\" She says, slowly limping off, completely forgetting her shorts and undies in a daze as she drunkenly walks off through the trees. What a mess. If that's the standards for Police or Investigators or Whatever she was, then you'd better look out......... Then you snap out and realize there isn't really anything like that on this island, and she was just delusional. You move along anyways.");
+	addChoice("End", modExit);
+}
+
+
+function resist2() {
+	clear();
+	append("You pout a bit more in retaliation. You can swear you see her smirk just a bit. \"Fine. Don't say I didn't warn you!\" She says rather proudly before swinging the line around your throat, choking you like a garrote wire. You can feel your air flow get cut of by the thin wire as she drops her puss right over your slightly opened mouth once more. You expect that she probably expects you to lick it some more! hah! You don't do that at......... wait a second.\n\nNope. All of a sudden, with what you can swear is a little giggle, she starts to piss over your open mouth. The warm bitter slightly yellow liquid filling up your mouth as you start to lose consciousness. The piss doesn't really go down your throat, and you can't exactly swallow, so it simply pools up in your mouth and pours over the edges.\n\nThe last thing you remember is her little squeaky giggle as you choke out, her piss overwhelming your senses......... You respawn elsewhere in the forest, still able to smell her strong piss somehow. Either way, it's time to move along.");
+	addChoice("End", modExit);
+}
+
+
+function medic3() {
+	clear();
+	append("You aren't about to complain as she is jerking you off, just lying back and letting her suck your head, giving her little bit of pre as you lick at the fabric of her shorts. She shudders some as she suckles your head, her liquids soaking through her shorts now, coating just a taste of her over your lips. You can't help but buck up against her face now as she sucks, working her little tongue over your tip.\n\nAfter a good few moments, she pulls her head off and whisper. \"C-Consider this your lucky d-day, P-pal. I-I'll l-let you o-off easy i-i-if you g-give m-me your cum.........\" She mutters, jerking you off with one hand before taking your shaft back in her mouth after she finishes talking, rubbing at your balls now. All your senses are very overwhelmed with her amazing smell now as she facesits you, leaking over your face. Combine that with her little paws and tight warm mouth working over your cock, you're already rather close.");
+	addChoice("Give her what she wants", rewardher);
+}
+
+
+function ploughthatpuss() {
+	clear();
+	append("How could you resist such a cutie begging for you like that? I mean, after all, she's literally spreading herself for you. You can't pass up an offer like this. You lie over her and line up with her sweet puss, pinning her down before sliding your cock inside of her tight opossum snatch. \n\nShe moans loudly and throws her head back as soon as you slide in, her little puss squeezing your cock tightly and massiging it in her warmth as you let her get adjusted......... Holding just a moment before you lift your hips and start to pump in and out of the sweet little Millie, giving her what she wanted. Her little squeaks grow louder as she gives you a quick kiss, moaning as your balls slap against her.\n\nIt doesn't take very long for her to become a shivering moaning mess of squeaky opossum. Shivering and squeaking with every heavy thrust inside of her, your tip kissing her womb with every plap against her. It gets to the point where it's hard to keep a level head and not just pump into her like mad.\n\nYou're not gonna last much longer, it's coming.");
+	addChoice("Fill 'er up", fillherup);
+}
+
+
+function lethergo2() {
+	clear();
+	append("You quickly start to pump a finger in and out of her, followed by a second one as she rubs you off, never breaking that kiss while the two of you work each others privates. She lets out a little squeak into the kiss, a pang of shivering pleasure. It seems you found her Spot, Time to exploit.\n\nYou continue to hammer away at that sensitive spot with two fingers while she speeds up her jerking some, rubbing against your sensitive head with those expert little shuddering fingers, working over your shaft, moving lower towards your base. Your member is already throbbing, her little soft fingers stroking up and down your member quicker and quicker.\n\nYou don't have much longer.");
+	addChoice("Drive your fingers inside her and Cum", lethergo3);
+}
+
+
+function surprisebuttsecks() {
+	clear();
+	append("You quickly make your way over, and slide your cock right up her tailhole without wasting a single second, or with even the thought to ask her. She lets out a rather loud squeaky yelp of surprise before keeling over some, bending forward and pushing her bum against you. Her bum is rather tight and practically sucks you in.\n\n\"H-Hey! P-Prewarn m-m-me n-next t-time!\" She shouts out as you slip in and out of her tight ass. Surprisingly, she doesn't complain so much, happily bouncing back against you as you fill her tight tailhole with your cock, your balls slapping against her puss with every mean thrust into her.\n\nYou continue for a while, her prehensile tail working its way over your chest as you hold her hips for leverage, pumping in and out of her tightness, almost as if you have to make more effort to pull out then push in. She's a squeaking mess like she's been the entire time, moaning loudly as her puss drips down her thighs.\n\nGood luck holding out much longer.");
+	addChoice("Cum in her bum", cumbum);
+	
+}
+
+function cumbum() {
+	clear();
+	append("You grit your teeth and let out a loud groan, cumming deep inside the tight little opossum bum, getting her to squeal and jolt forward in an amassed pain and pleasure, her little body shivering as she crumples to the ground, some of your seed leaking out of her tight hole.\n\nYou let her go as she crumples to the ground, panting like a dog almost as her bum stays gaped for you, dribbling and leaking your thick seed as she looks back over her shoulder at you, her maw hanging open as she pants.\n\n\"Th-That......... W-Was......... H-Haah, Th-Thank y-you\" She mutters out, before lying down in the dirt, curling up on her side. Her chest rises and falls quickly from her breathing as she reaches down into her pouch for another moment, holding her hands in there like a jacket.\n\nYou suppose it's time for you to go as she passes out.");
+	addChoice("End", modExit);
+	
+}
+
+
+function tonguethathole() {
+	clear();
+	append("You drop down to your knees behind her and taking a long sniff of that sweet tailhole, before giving it a long lick. It smells even better than you could have ever imagined. She lets out a little giggle as you work your tongue around her bum, giving her a nice rimjob.\n\n\"Heh, You're rather strange, a-aren't you? I-If y-ya wanted t-to lick m-my bum, y-ya just h-had to ask! Why don't y-yah give m-m-me a little kiss t-too while y-you're a-at it!\" She chuckles out, probably as a joke......... You give her little pucker a nice kiss anyways, before slipping your tongue on in. You hear her make a quick couple of squeaks before you notice her puss leaking some. She slides a hand down to rub at it while you rim her.\n\n\"D-Don't y-you mind m-me, K-Keep on g-going!\" She squeals out as she starts to finger herself.");
+	addChoice("Lick her clean", lickherclean);
+}
+
+
+function cumnice() {
+	clear();
+	append("You can't hold out anymore, you hold her down on your cock end empty your heavy balls right inside of her tight puss around the same time that she has her intense orgasm. She tenses up and shudders like wild, her little body spasming and shivering as your seed fills her up, almost pudging out her thin opossum belly.........\n\nThe two of you hold there a moment before she falls over you, lying on your chest while you lie there. You hold her closely, wrapping your arms around her tired little opossum body.\n\n\"Th-Thank you......... s-so much, s-sir......... I-I'm g-gonna t-take a n-nap n-now........\" She says as she slowly goes limp on you. You slowly drift off with her as well, her little soft body in your grip as you drift off.........\n\nYou wake up a little while later with her still asleep on you. You smile to yourself and pick her up, lying her in a comfy bit of grass of to the side, picking up her belongings and setting them with her before heading off on your way, a little spring in your step.");
+	addChoice("End", modExit);
+}
+
+
+function cummean() {
+	clear();
+	append("You quickly grab her tighter and force her down on your cock, all the way to the hilt, before you unleash a waterfall of cum deep inside of her puss whether she likes it or not. She's squealing and screaming now, which all culminate through her pained orgasm, her belly pushing out some as you cum deep inside of her.\n\nShe squeals and squeaks once more, before going fully limp, probably playing dead......... stupid opossum cocksock couldn't even stay conscious. You push her off of you, hearing her body plop against the dirt before you stand up, brushing yourself and walking right off without a word. ");
+	addChoice("End", modExit);
+}
+
+
+function rewardher() {
+	clear();
+	append("You just can't help it anymore, quickly blowing your load right in her tight opossum mouth, hearing her little squeaks and whines grow louder as she grinds against your face, her throat and belly getting filled as she swallows down your seed eagerly. After a moment, she pulls off of you quickly, panting some quietly to herself.\n\n\"H-Haah......... P-Player s-seed Does taste better then the islanders! I always thought so! I......... Th-Thank you.........\" She mutters, before standing up off of you, brushing herself off and wiping the cum off of her lips as she notices her soaked shorts.\n\n\"O-Oh, goodness, s-sorry, I......... I'm g-gonna go clean these up......... Th-Thanks a-again! Stay out of trouble!\" She shouts out to you as she runs off!\n\nThat sure was strange.");
+	addChoice("End", modExit);
+}
+
+
+function fillherup() {
+	clear();
+	append("You slap against her, over and over and over again as she shivers, moaning right below you as you pump in and out of her cute little Puss. She squeals, obviously loving every bit of it, bucking against you and arching her little back as she loudly orgasms, egging yours on out.\n\nYou cum while she gives you a loud squeaky moan, feeling your seed fill her up, overflowing her womb some as you creampie her tight little puss. holding her close as you lie over her, breathing heavily as she gives you another quick kiss on the cheek, before smiling.\n\n\"Th-Thank you.........\" She passes out, closely followed by yourself, falling asleep over her, nuzzling her closely while you hold inside of her.\n\nYou wake up a little while later, alone as can be......... A little note lies on the ground\n\n\"Thank y-you so much f-for playing w-w-with me! W-We should p-play a-again s-sometime!\"\n\nHeh, She even stutters when she writes. Either way, you get a move on.");
+	addChoice("End", modExit);
+}
+
+
+function lethergo3() {
+	clear();
+	append("You quickly drive your fingers in and out of her, still kissing her as she jerks you off. You're rather tensed up, like her, before you both cum in seemingly sync. Your load shoots into the air, some landing on her hands, but most of it landing in the dirt. She tenses up aroudn your fingers while you do, moaning and squealing into the kiss while she shudders through a rather intense orgasm herself, like her puss is trying to milk your fingers like they're a cock.\n\nYou both break the kiss and take deep breaths, recuperating together with quick little breaths as you two stay close together. You two smile and giggle at what just happened, before she pulls you into a tight hug, giving you another kiss on the cheek. She stands up, stretching out.\n\n\"M-Man, you really know how to p-please a g-girlie like m-me! W-We'll have to d-do more sometime!\" she says, walking off some. \"S-See ya around, I guess!\" And with that, she's gone, leaving you dazed and confused.\n\nA little while later after you collect yourself, you head off, steping over the shorts and undies she had just left.");
+	addChoice("End", modExit);
+}
+
+
+function lickherclean() {
+	clear();
+	append("You continue licking at her bum, then down towards her taint as her knees buckle some, shivering some as she fingers herself quickly, using a whole three fingers to pound herself, girlie juices dripping down her inner thigh. You make small laps at the juices, before going back to her pucker, going back and forth between the two, coating her bum in her juices along with your slobber.\n\nIt doesn't take that long for the little Millie to cum, squirting and leaking like a faucet as she squeals, juices dripping onto the ground as you pull away. She giggles and holds there for a second, before slowly dragging herself up to her feet.\n\n\"D-Dang......... Th-That w-was really impressive......... I-I'll b-be honest.........\" She shudders. \"Th-Thank you for that......... I......... I'm g-gonna go hunt th-that stupid d-dog, but y-you t-take c-care, alright?\" she waves, before heading off.");
+	addChoice("End", modExit);
+}
+
+main();
+
