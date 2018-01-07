@@ -1,0 +1,158 @@
+	/// Basic UI
+append(str:String):Void 
+setLocation(str:String):Void 
+addTextChoice(result:String->Void):Void 
+addChoice(labelText:String, result:Void->Void, config:ButtonConfig=null):Button 
+addSprite(path:String, permanent:Bool=false):MintSprite 
+prepareSprite(sprite:MintSprite, permanent:Bool=false):Void 
+clear():Void 
+msg(str:String, silent:Bool=false, lastsLong:Bool=false):Void 
+startHub(hubName:String):Void 
+gotoHub(hub:String=null):Void
+
+	/// Expanded UI
+clearChoices():Void 
+clearText():Void 
+clearTemp():Void 
+enableCursorKeys():Void 
+disableCursorKeys():Void 
+
+buttonsInGrid(fontSize:Float, buttonsWide:Int, buttonWidth:Float, xPad:Float, yPad:Float, xOff:Float, yOff:Float, buttons:Array<Button>=null):Point
+makeButtonLine(labels:Array<String>, xpos:Float, ypos:Float, direction:Direction):Array<Button> 
+addText(permanent:Bool=false):MintText 
+halfWidthText():Void 
+
+isPaused(layer:Int=0):Bool 
+showChoices():Void 
+hideChoices():Void 
+makeSmallButtons():Void 
+
+	/// Audio
+playSound(path:String, channelName:String="", config:SoundConfig=null):Void 
+stopChannel(name:String):Void 
+resetGlobalVolume():Void 
+setChannelVolume(name:String, volume:Float):Void 
+fadeChannel(name:String, fadeIn:Bool=false, time:Float=1):Void 
+
+	/// Mynt
+	showMynt():Void
+	hideMynt():Void
+	myntQueueSay(text:String):Void
+	myntQueueTransition(emote:String):Void 
+	myntQueueCall(fn:Void->Void):Void 
+	myntQueueAddChoice(labelText:String, result:Void->Void, config:ButtonConfig=null):Void 
+	myntQueueAddTextChoice(result:String->Void):Void 
+	myntQueueShowChoices():Void 
+	myntQueueHideChoices():Void 
+	myntQueueDelay(seconds:Float):Void 
+	myntProceed():Void 
+
+	/// Pause
+pauseIsGoingPrev():Bool 
+pauseGoPrev():Void 
+pauseNoGoPrev():Void 
+returnToPrev():Void 
+enablePause():Void 
+disablePause():Void 
+
+saveCheckpoint(haxeCode:String):Void 
+	cameraFadeIn(colour:Int, time:Float, onComplete:Void->Void=null, force:Bool=true):Void 
+	cameraFadeOut(colour:Int, time:Float, onComplete:Void->Void=null, force:Bool=true):Void 
+
+	/// Game Data
+addPlace(label:String, desc:String, hub:String="global"):Void 
+getPlace(label:String):Dynamic 
+removePlace(place:ActionPlace):Bool 
+
+addAction(label:String, desc:String, hub:String="global"):Void 
+getAction(label:String):Dynamic 
+removeAction(action:ActionPlace):Bool 
+
+addItem(label:String, desc:String):Void 
+getItem(label:String):Item 
+addToItem(label:String, amount:Float, silent:Bool=false):Void 
+removeItem(item:Item):Bool 
+isActive(label:String):Bool 
+unlockJournal(entry:String):Void 
+getJournalEntries():Array<String> 
+wakeUp():Void 
+
+	load
+loadMod():Void 
+saveToString():String 
+loadCurFromString(gameStr:String):Void 
+
+	/// Util
+	pickOne<T>(array:Array<T>, exclude:Array<T>=null):T
+
+onFA():Bool 
+hookClear(fn:Void->Void):Void 
+hookUpdate(fn:Void->Void):Void 
+getFps():Float 
+
+	rndSeed(seed:Int, pool:Int):Void 
+	rndInt(min:Int, max:Int, pool:Int=0):Int 
+	rndFloat(min:Float, max:Float, pool:Int=0):Float 
+	random(pool:Int=0):Float 
+
+getAssetList():Array<String> 
+pathToText(assetId:String):String 
+onGainFocusOnce(fn:Void->Void):Void 
+onLoseFocusOnce(fn:Void->Void):Void 
+
+	/// Tweens
+tween(obj:Dynamic, params:Dynamic, seconds:Float, config:TweenConfig=null):Void 
+timer(seconds:Float, fn:Void->Void, loops:Int=1):Int 
+timerCancel(id:Int):Void 
+getTimer():Float 
+
+addExplorable(id:Int, pool:String, result:Void->Void, chance:Int, times:Int=-1):Void 
+disableExplorable(id:Int):Void 
+explore(poolName:String=null):Void 
+
+	showToolTipOnCursor(title:String, body:String="", type:String="default"):Void 
+
+	/// Swf
+addMovie(swfName:String, fps:Float):Void 
+resizeMovie(swfName:String, width:Float=-1, height:Float=-1):Void 
+moveMovie(swfName:String, x:Float=-1, y:Float=-1):Void 
+removeMovie(swfName:String):Void 
+movieToFrame(swfName:String, partName:String, frame:Int):Void 
+
+	//Complex Anim
+	createComplexAnim(animName:String):ComplexAnim
+
+addRectSprite(width:Float, height:Float, colour:Int, permanent:Bool=false):MintSprite 
+getStoryText():String 
+print(msg:Dynamic):Void 
+warn(msg:Dynamic):Void 
+error(msg:Dynamic):Void 
+
+	/// Theme
+resetTheme():Void 
+unlockUi(theme:String, part:String, makeSound:Bool=true):Void 
+equipUi(theme:String, makeSound:Bool=true):Void 
+	themeGetColour
+
+	/// Misc
+getKeyStatus(key:Key):Bool 
+bindKey(key:Key, fn:Void->Void, state:ButtonState=null, interval:Float=0):Void 
+unBindKey(key:Key, fn:Void->Void=null):Void 
+getUrl(url:String):Void 
+installClassFields(classes:Array<Class<Dynamic>>):Void 
+
+	sliderCreate
+	sliderDestroy
+	sliderRedraw
+	sliderAlign
+
+	emitterCreate
+	emitterEmit
+	emitterDestroy
+
+	tilemapCreate
+autotileRaw(array:Array<Array<Int>>, autotileStart:Int, autotileEnd:Int):Void 
+
+	/// Mods
+modExec(haxe:String):Void 
+loadBase64Png(name:String, str:String, onComplete:Void->Void):Void 
