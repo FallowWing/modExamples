@@ -1,6 +1,5 @@
 function main() {
 	clear();
-
 	// var s = addSprite("custom_art");
 	// s.x = 0;
 	// s.y = 0;
